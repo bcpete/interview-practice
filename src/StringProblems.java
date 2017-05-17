@@ -8,18 +8,8 @@ import java.util.*;
 public class StringProblems {
 
     public static void main(String[] args) {
-        //String A,B for testing stringSumLexoCapitalize. S for lettersInRange.
-        String A = "Hello";
-        String B = "Java";
-        String S = "Helloworld";
-        //start and end for testing lettersInRange.
-        int start = 3;
-        int end = 7;
-        stringSumLexoCapitalize(A, B);
-        lettersInRange(S, start, end);
-        //C is for testing ispalindrome
-        String C = "madam";
-        isPalindrome(C);
+
+
     }
 
     //Takes in two strings A,B prints the sum of their lengths, whether or not A is lexographically larger than B,
@@ -46,4 +36,24 @@ public class StringProblems {
                 ? "Yes" : "No");
 
     }
+
+    //Given an integer, N , print its first 10 multiples. Each multiple Nxi (where1<i<10 ) should be printed on a new line in the form: N x i = result.
+    public static void printMultiples(int N) {
+        for (int i = 1; i < 11; i++) {
+            System.out.println(N + " x " + i + " = " + N * i);
+        }
+    }
+
+    //Given a string, s , matching the regular expression [A-Za-z !,?._'@]+, split the string into tokens.
+    // We define a token to be one or more consecutive English alphabetic letters.
+    // Then, print the number of tokens, followed by each token on a new line.
+    public static void splitOnToken(String s){
+        String splitChars = "[ .,?!'/><()@#$%^&*]+";
+        String[] answer = s.split(splitChars);
+        System.out.println(answer.length);
+        for(String string : answer){
+            System.out.println(string);
+        }
+    }
+
 }
